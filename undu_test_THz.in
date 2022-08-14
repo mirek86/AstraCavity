@@ -1,0 +1,62 @@
+&NEWRUN
+  Head='undu_test' 
+  RUN=1,
+
+  Distribution = '10k250pC8ps69MeV.ini',  Xoff=0.0, Yoff=0.0, Zoff=0.0,
+     
+  TRACK_ALL=T,
+  AUTO_PHASE=F,
+  H_max=0.001, H_min=0.0,
+  Max_step=200000,
+
+  PHASE_SCAN=T,
+  check_ref_part=F,
+
+
+/
+
+ &OUTPUT 
+  ZSTART=0.0, ZSTOP=2.5,
+
+  Zemit=3500, Zphase=1.0,
+
+   RefS=T, EmitS=T, PhaseS=T, LandFS=T,
+   TrackS=T,
+   CathodeS=F, high_res=T,
+ /
+
+ &SCAN
+ /
+
+ &CHARGE
+   LSPCH=F, LSPCH3D=F,
+!   Nxf=26, Nyf=26, Nzf=34,
+ /
+
+ &APERTURE
+ /
+
+ &CAVITY
+   LEField=T,
+
+   File_Efield(1) = '3D',
+   C_pos(1)=0.5, 
+   Nue(1)=0,
+   MaxE(1)=0.6,   
+   By_stat(1)=T,
+   C_numb(1)=25,
+
+
+ /
+
+
+ &SOLENOID
+ /
+
+ &QUADRUPOLE
+ 
+ /
+
+ &DIPOLE
+ /
+
